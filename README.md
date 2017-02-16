@@ -3,7 +3,7 @@ This repository contains a set of guidelines for developing REST APIs.
 
 ## Table of contents
 1. [REST API Styleguide](https://github.com/wmeints/rest-services/blob/master/rest-styleguide.md)
-2. REST API Versioning guide
+2. [REST API Versioning guide](https://github.com/wmeints/rest-services/blob/master/rest-versioning-guide.md)
 
 ## Contributing
 If you have any comments or questions, please leave an issue in this repository.
