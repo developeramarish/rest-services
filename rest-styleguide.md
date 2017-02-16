@@ -1,19 +1,19 @@
 # API styleguide
 Based on previous experiences with API development at Info Support we wanted
-to document how we think APIs should be build. This document provides general
+to document how we think APIs should be built. This document provides general
 guidance on how to build APIs and is loosly based on a guide published by
 paypal.
 
 ## URI components
-We have but a few general rules to identify resources in our API. The general
-idea behind these rules is that our APIs are resource oriented whenever we can.
+We have a few general rules to identify resources in our API. The
+idea behind these rules is that our APIs are resource oriented where possible.
 
 ### Resource identification
 To access a resource within the API you need to know the name of the resource
-and its identifier. We use business identifiers as much as possible to make the
-API easier to use.
+and its identifier. We use business identifiers as much as possible to make the 
+API feel more intuitive.
 
-We specify resource identifiers like so:
+We specify resource identifiers like this:
 
 ```
 /{namespace}/{version}/{resource}/{resource-id}/{sub-resource}/{sub-resource-id}
@@ -124,7 +124,7 @@ Response:
 
 ## Read single resource
 As part of a collection it is possible to request a single resource from our API.
-Resources are usually identified by a business property like transaction number.
+Resources are usually identified by a business property like a transaction number.
 Technical IDs in the URL should be avoided if possible.
 
 ### URL template
@@ -197,9 +197,10 @@ The response is the same as with a regular GET operation.
  - 400 BAD REQUEST: The update failed, because of a validation error
 
 ## Create a new resource
-Creates a new item in a collection within the API. The request body for this kind
-of request is different from the update operation in that we sometimes accept
-less values in a create operation.
+Creates a new item in a collection within the API. The request body for this operation
+doesn't always have to mirror the `GET` response or `PUT` body. 
+Sometimes we accept a create that lacks certain values.
+An example would be a created_at timestamp.
 
 ### URL template
 ```
