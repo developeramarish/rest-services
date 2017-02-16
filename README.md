@@ -1,4 +1,4 @@
-# REST services
+# REST API guidelines
 This repository contains a set of guidelines for developing REST APIs.
 
 ## Table of contents
